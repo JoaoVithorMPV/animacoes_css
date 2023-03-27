@@ -1,0 +1,130 @@
+<<Minicurso Animações CSS>> <<Youtube: dpw>>
+
+✦Índice das Informações✦
+▷
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► 01- Propriedade "transform"
+A propriedade "transform" do CSS é usada para aplicar transformações em elementos HTML, incluindo rotação, escala,
+translação e inclinação. Essas transformações podem ser usadas para criar efeitos visuais interessantes e 
+dinâmicos em um site.
+
+O valor "translateX" move um elemento HTML horizontalmente.
+O valor "translateY" move um elemento HTML verticalmente.
+O valor "translate" é um atalho para os valores "translateX" e "translateY" combinados.
+O valor "scale" aumenta ou diminui o tamanho de um elemento HTML de forma uniforme nos eixos X e Y.
+O valor "scaleX" aumenta ou diminui o tamanho de um elemento HTML apenas no eixo X.
+O valor "scaleY" aumenta ou diminui o tamanho de um elemento HTML apenas no eixo Y.
+O valor "rotate" gira um elemento HTML em torno de um ponto específico.
+O valor "skewX" inclina um elemento HTML horizontalmente.
+O valor "skewY" inclina um elemento HTML verticalmente.
+O valor "skew" inclina um elemento HTML em relação a ambos os eixos horizontal e vertical.
+
+Ex prático:
+
+transform: translate(50px, 100px);
+
+transform: scaleX(1.5);
+
+
+
+
+
+► 02- Propriedade "transition-..."
+✦ A propriedade "transition-property" especifica qual propriedade CSS deve ter uma transição animada. Por exemplo, 
+podemos usar "transition-property: background-color;" para animar a transição de cor de fundo de um elemento.
+
+✦ A propriedade "transition-duration" especifica a duração em segundos ou milissegundos da transição animada. 
+Por exemplo, podemos usar "transition-duration: 1s;" para especificar que a transição deve durar um segundo.
+
+✦ A propriedade "transition-delay" especifica um atraso em segundos ou milissegundos que deve ter desde o gatilho da ativação até o seu início. 
+Por exemplo, podemos usar "transition-delay: 0.5s;" para especificar que a transição deve começar após 
+meio segundo.
+
+✦ A propriedade "transition-timing-function" especifica o ritmo da transição animada. Por exemplo, podemos usar 
+"transition-timing-function: ease-in-out;" para especificar que a transição deve começar devagar, acelerar no 
+meio e diminuir no final. Já "transition-timing-function: cubic-bezier" define uma curva de animação 
+personalizada para uma transição em CSS, como por exemplo: 
+transition-timing-function: cubic-bezier(0.15, 0.89, 0.85, 0.26);.
+
+Ex prático:
+
+button {
+  background-color: blue;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+button:hover {
+  background-color: green;
+}
+
+
+
+
+
+► 03- Keyframes e propriedade "animation-..."
+
+✦ "@keyframes": é uma regra do CSS que define a animação em si. Nesta regra, você define os estágios da animação 
+(também conhecidos como "keyframes"), indicando o estilo do elemento em cada estágio. Os keyframes são 
+definidos utilizando a sintaxe "from" (ou "0%") e "to" (ou "100%") para indicar o início e o fim da animação, 
+ou valores intermediários entre 0% e 100% para indicar estágios intermediários da animação.
+
+✦ A propriedade CSS "animation" permite criar animações complexas em elementos HTML. Ela é composta por 
+várias subpropriedades que controlam aspectos diferentes da animação. Vou explicar cada uma delas:
+
+"animation-name": define o nome da animação, que deve ser definido usando a regra "@keyframes". Esta é a parte 
+mais importante da animação, pois é onde você define os estágios da animação.
+
+"animation-duration": define a duração da animação, em segundos ou milissegundos.
+
+"animation-timing-function": define a curva de animação usada na animação. É uma função que define como a 
+animação progride ao longo do tempo, e pode ser uma função predefinida ("ease", "linear", "ease-in", "ease-out", 
+"ease-in-out"), ou uma função personalizada definida usando o valor "cubic-bezier". Ela também suporta o valor 
+"steps", ela divide a animação em etapas iguais, onde cada etapa é definida pela porcentagem do tempo total 
+da animação. Por exemplo, "steps(4)" divide a animação em 4 etapas iguais
+
+"animation-delay": define o tempo de espera antes do início da animação, em segundos ou milissegundos.
+
+"animation-iteration-count": define o número de vezes que a animação será repetida. Pode ser um número inteiro 
+ou o valor "infinite" para repetir a animação infinitamente.
+
+"animation-direction": define a direção da animação (para frente, para trás, alternando, etc.).
+
+"animation-fill-mode": define como o estado final da animação será mantido após o término da animação. Pode ser 
+"forwards" (mantém o estado final), "backwards" (mantém o estado inicial), "both" (mantém ambos os estados) ou 
+"none" (não mantém nenhum estado).
+
+"animation-play-state": define se a animação está em execução ou pausada.
+
+✦ A propriedade "animation" resume todas essas subpropriedades em uma única declaração. A ordem dos valores deve 
+seguir a seguinte sequência: "animation-name", "animation-duration", "animation-timing-function", 
+"animation-delay", "animation-iteration-count", "animation-direction", "animation-fill-mode" e 
+"animation-play-state".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
