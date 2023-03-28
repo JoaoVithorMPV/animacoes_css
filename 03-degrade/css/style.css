@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6db, #23d5ab);
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+
+  animation: degrade 2s ease alternate infinite;
+}
+
+@keyframes degrade {
+  from {
+    background-position: 0 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}

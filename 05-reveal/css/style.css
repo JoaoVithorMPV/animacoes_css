@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+.reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+.reveal::after {
+  background-color: #ff0303;
+  content: "";
+  display: block;
+  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  animation: reveal 2s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+}
+
+h1 {
+  animation: fade 1ms 1s forwards;
+  opacity: 0;
+}
+
+@keyframes reveal {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
